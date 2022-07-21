@@ -10,7 +10,7 @@ router.get('/parties', (req, res) => {
             res.status(500).json({ error: err.message });
         }
         res.json({
-            message: 'success',
+            message: 'Success',
             data: rows
         });
     });
@@ -26,7 +26,7 @@ router.get('/party/:id', (req, res) => {
             return;
         }
         res.json({
-            message: 'success',
+            message: 'Success',
             data: row
         });
     });
@@ -46,7 +46,7 @@ router.delete('/party/:id', (req, res) => {
             });
         } else {
             res.json({
-                message: 'deleted',
+                message: 'Deleted',
                 changes: result.affectedRows,
                 id: req.params.id
             });

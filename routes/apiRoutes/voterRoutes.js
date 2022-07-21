@@ -13,8 +13,8 @@ router.get('/voters', (req, res) => {
             return
         }
         res.json({
-            message: 'success',
-            data: rows,
+            message: 'Success',
+            data: rows
         });
     });
 });
@@ -30,7 +30,7 @@ router.get('/voter/:id', (req, res) => {
             return;
         }
         res.json({
-            message: 'success',
+            message: 'Success',
             data: row
         });
     });
@@ -55,7 +55,7 @@ router.post('/voter', ({ body }, res) => {
             return;
         }
         res.json ({
-            message: 'success',
+            message: 'Success',
             data: body
         });
     });

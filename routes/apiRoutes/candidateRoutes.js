@@ -17,12 +17,11 @@ router.get('/candidates', (req, res) => {
             return;
         }
         res.json({
-            message: 'success',
+            message: 'Success',
             data: rows
         });
     });
 });
-
 
 // get a single candidate
 router.get('/candidate/:id', (req, res) => {
@@ -40,12 +39,11 @@ router.get('/candidate/:id', (req, res) => {
             return;
         }
         res.json({
-            message: 'success',
+            message: 'Success',
             data: row
         });
     });
 });
-
 
 // create a candidate
 router.post('/candidate', ({ body }, res) => {
@@ -63,7 +61,7 @@ router.post('/candidate', ({ body }, res) => {
             return;
         }
         res.json({
-            message: 'success',
+            message: 'Success',
             data: body
         });
     });
@@ -90,7 +88,7 @@ router.put('/candidate/:id', (req, res) => {
             });
         } else {
             res.json({
-                message: 'success',
+                message: 'Success',
                 data: req.body,
                 changes: result.affectedRows
             });
@@ -112,7 +110,7 @@ router.delete('/candidate/:id', (req, res) => {
             });
         } else {
             res.json({
-                message: 'deleted',
+                message: 'Deleted',
                 changes: result.affectedRows,
                 id: req.params.id
             });
